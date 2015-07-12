@@ -1,8 +1,10 @@
 ##download the data and unzip the data 
 download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip",destfile="household_power_consumption.zip")
 unzip("household_power_consumption.zip")
+
 ##read the data into R
 pw <-read.table("household_power_consumption.txt",header=TRUE,sep=";")
+
 ##convert the Date and Time variables to Date/Time classes
 tt <- strptime(paste(pw[,1],pw[,2]), "%d/%m/%Y %H:%M:%OS")
 pw2 <- cbind(pw,tt)
