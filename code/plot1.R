@@ -15,7 +15,6 @@ et <-  strptime('3/2/2007 00:00:00', "%d/%m/%Y %H:%M:%OS")
 
 ##extract data data from the selected date
 ll <- pw2[which(pw2[,"tt"] >= st & pw2[,"tt"] < et),]
-
-hist(gap, col = "red",xlab="Global active power(kilowatts)",main="Global active power")
 png("plot1.png",width = 480, height = 480)
+hist(gap, col = "red",xlab="Global active power(kilowatts)",main="Global active power")
 dev.off()
